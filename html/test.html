@@ -1,0 +1,155 @@
+
+<head>
+<style>
+	.test{
+		height:100px;
+		width:100px;
+		background-color:red;
+	}
+	.main_con{
+		background-image:url(img/kirin.jpg);
+		height:634px;
+		width:400px;
+		position:absolute;
+		left:50%;
+	}
+	.box{
+		position:relative;
+		height:634px;
+		width:1px;
+	}
+
+	.main_con_attack01{
+		background-image:url(img/fire.jpg);
+		height:61px;
+		width:60px;
+		display:none;
+		position:absolute;
+		top:50%;
+		left:50%;
+	}
+	.main_con_attack02{
+		background-image:url(img/water.jpg);
+		height:58px;
+		width:62px;
+		display:none;
+		position:absolute;
+		top:50%;
+		left:50%;
+	}
+	.main_con_attack03{
+		background-image:url(img/wind.jpg);
+		height:56px;
+		width:61px;
+		display:none;
+		position:absolute;
+		top:50%;
+		left: 50%;
+	}
+	.main_con_attack04{
+		background-image:url(img/earth.jpg);
+		height:57px;
+		width:58px;
+		display:none;
+		position:absolute;
+		top:50%;
+		left:50%;
+	}
+	
+	.main_con_list01{
+		background-image:url(img/kagari.png);
+		height:400px;
+		width:300px;
+		position:relative;
+		float:left;
+	}
+	.main_con_list02{
+		background-image:url(img/izumi.png);
+		height:400px;
+		width:300px;
+		position:relative;
+		float:left;
+	}
+	.main_con_list03{
+		background-image:url(img/mikaze.png);
+		height:400px;
+		width:300px;
+		position:relative;
+		float:left;
+	}
+	.main_con_list04{
+		background-image:url(img/kanako.png);
+		height:400px;
+		width:300px;
+		position:relative;
+		float:left;
+	}
+
+</style>
+<script src="./jquery-2.0.2.js"></script>
+<script>
+$(function(){
+	$('.test').click(function(){
+		alert('click');
+	});
+	$(".main_con").click(function(){
+		alert('マウスオーバーしました。');
+	});
+	$('.main_con').hover(function(){
+		$(this).stop()
+		.animate({"top":"-10px"},200).animate({"top":"-4px"},200)
+		.animate({"top":"-7px"},200).animate({"top":"-4px"},200)
+	});
+	//カガリ
+	$('.main_con_list01').hover(function(){
+		$(this).stop()
+		.animate({"top":"-8px"},100).animate({"top":"-3px"},100)
+		.animate({"top":"-4px"},100).animate({"top":"-3px"},100)
+	});
+	$('.main_con_list01').click(function(){
+		$('.main_con_attack01').toggle(500)
+	});
+	//イズミ
+	$('.main_con_list02').hover(function(){
+		$(this).stop()
+		.animate({"top":"-8px"},100).animate({"top":"-3px"},100)
+		.animate({"top":"-8px"},100).animate({"top":"-3px"},100)
+	});
+	$('.main_con_list02').click(function(){
+		$('.main_con_attack02').toggle(500)
+	});
+	//ミカゼ
+	$('.main_con_list03').hover(function(){
+		$(this).stop()
+		.animate({"top":"-8px"},100).animate({"top":"-3px"},100)
+		.animate({"top":"-8px"},100).animate({"top":"-3px"},100)
+	});
+	$('.main_con_list03').click(function(){
+		$('.main_con_attack03').toggle(500)
+	});
+	//カナコ
+	$('.main_con_list04').hover(function(){
+		$(this).stop()
+		.animate({"top":"-8px"},100).animate({"top":"-3px"},100)
+		.animate({"top":"-8px"},100).animate({"top":"-3px"},100)
+	});
+	$('.main_con_list04').click(function(){
+		$('.main_con_attack04').toggle(500)
+	});
+});
+</script>
+</head>
+<body class="page">
+<div class="test"></div>
+<div class="main_con"></div>
+<div class="box"></div>
+<div class="main_con_attack01"></div>
+<div class="main_con_attack02"></div>
+<div class="main_con_attack03"></div>
+<div class="main_con_attack04"></div>
+<div class="main_con_list01"></div>
+<div class="main_con_list02"></div>
+<div class="main_con_list03"></div>
+<div class="main_con_list04"></div>
+</body>
+
